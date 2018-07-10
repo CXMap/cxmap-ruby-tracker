@@ -96,10 +96,6 @@ module CXMap
       if params[:context].present?
         params[:context] = params[:context].to_json
       end
-
-      if params[:person].present? && params[:person][:properties].present?
-        params[:person][:properties] = params[:person][:properties].to_json
-      end
       
       # add common attributes
       params[:app_key] = app_key
