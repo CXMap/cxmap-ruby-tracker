@@ -26,8 +26,8 @@ RSpec.describe CXMapTracker::PersonSchema do
 
       it 'should return error messages' do
         expect(validation.messages).to be_present
-        expect(validation.messages).to include(:client_id)
-        expect(validation.messages[:client_id]).to include(/must be filled/)
+        expect(validation.messages).to include(:cxm)
+        expect(validation.messages[:cxm]).to include(/must be filled/)
       end
     end
   end

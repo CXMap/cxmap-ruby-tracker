@@ -1,5 +1,6 @@
 module CXMapTracker
   PersonSchema = Dry::Validation.Form do
+    optional(:cxm).maybe(:str?)
     optional(:client_id).maybe(:str?)
     optional(:email).maybe(:str?)
     optional(:phone).maybe(:str?)    
@@ -16,8 +17,8 @@ module CXMapTracker
     optional(:properties).maybe(:hash?)
     optional(:tags).each(:str?)
     
-    validate(filled?: [:phone, :email, :client_id]) do |phone, email, client_id|
-      client_id.present? || phone.present? || email.present?
+    validate(filled?: [:phone, :email, :client_id, :cxm]) do |phone, email, client_id, cxm|
+      cxm.present? || client_id.present? || phone.present? || email.present?
     end
   end
 end
