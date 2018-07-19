@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe CXMapTracker::EmailSendSchema do  
+RSpec.describe CXMapTracker::EmailSentSchema do  
   let(:schema){described_class}
   let(:validation){schema.call(data)}
   

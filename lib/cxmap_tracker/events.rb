@@ -38,7 +38,7 @@ module CXMapTracker
     required(:event_properties).schema(event_properties)
   end
 
-  EmailSendSchema = Dry::Validation.Schema(EventSchema) do
+  EmailSentSchema = Dry::Validation.Schema(EventSchema) do
     required(:label).filled(:str?)
   end
 
