@@ -12,7 +12,7 @@ RSpec.describe CXMapTracker::TransactionSchema do
           event_properties: {
             order_id: 'xxx',
             total: 100.0,
-            currency_iso: '', 
+            currency_iso: 'usd', 
             items: [
               {sku: 'xxx', name: '', category_id: '', category_name: '', price: 100.0, qnt: 1.0}
             ]
