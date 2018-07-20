@@ -65,9 +65,9 @@ module CXMap
 
       event = event.to_s.underscore
 
-      if !event.in?(EVENTS) 
-        raise ValidationError.new("unknown event #{event}")
-      end
+      # if !event.in?(EVENTS) 
+      #   raise ValidationError.new("unknown event #{event}")
+      # end
 
       if data.blank?
         raise ValidationError.new('data required')
