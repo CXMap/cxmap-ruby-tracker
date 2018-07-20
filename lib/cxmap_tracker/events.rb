@@ -29,7 +29,7 @@ module CXMapTracker
     event_properties = Dry::Validation.Schema(PropertiesSchema) do
       required(:order_id).filled(:str?)
       required(:total).filled(:float?)
-      optional(:currency_iso).filled(:str?)
+      optional(:currency_iso).maybe(:str?)
       required(:items).each do 
         schema(ItemSchema)
       end
