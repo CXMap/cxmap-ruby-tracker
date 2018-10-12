@@ -53,12 +53,4 @@ module CXMapTracker
   FormSubmitSchema = Dry::Validation.Schema(EventSchema) do
     required(:label).filled(:str?)
   end
-
-  CustomSchema = Dry::Validation.Schema(EventSchema) do
-    event_properties = Dry::Validation.Schema(PropertiesSchema) do
-      required(:key).filled(:str?)
-    end
-
-    required(:event_properties).schema(event_properties)
-  end
 end

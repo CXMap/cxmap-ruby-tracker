@@ -43,7 +43,6 @@ module CXMap
       form_submit
       phone_call
       meeting
-      custom
     }
 
     def initialize(app_key, tracker_domain, tracker_timeout=nil)
